@@ -58,11 +58,11 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="corneyl" \
+    maintainer="jsadusk" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Corneyl's addons" \
-    org.opencontainers.image.authors="corneyl" \
+    org.opencontainers.image.vendor="Jsadusk's addons" \
+    org.opencontainers.image.authors="jsadusk" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
