@@ -1,7 +1,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Snapcast server
+name: Extended Snapcast server
 version: "0.0.2"
-slug: snapcast-server
+slug: extended-snapcast-server
 description: Snapcast server with Spotify connect support
 url: "https://github.com/jsadusk/hassio-addons/tree/main/snapcast-server"
 audio: true

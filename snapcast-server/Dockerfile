@@ -20,7 +20,7 @@ RUN \
         pulseaudio=16.1-r6 \
         alsa-plugins-pulse=1.2.7.1-r0 \
         snapcast=0.26.0-r3 \
-        shairport-sync=4.3.4-r0 \
+        \ #shairport-sync=4.3.4-r0 \
     \
     && cargo install \
         --locked \
