@@ -1,26 +1,26 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:16.3.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base
 FROM $BUILD_FROM
 
 # See https://github.com/librespot-org/librespot/wiki/Compiling#addition-features for librespot compile features.
 RUN \
 	apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r3 \
-        cargo=1.64.0-r2 \
-        git=2.38.3-r1 \
-        protobuf-dev=3.21.9-r0 \
-        pulseaudio-dev=16.1-r6 \
-        avahi-dev=0.8-r6 \
+        build-base \
+        cargo \
+        git \
+        protobuf-dev \
+        pulseaudio-dev \
+        avahi-dev \
     \
     && apk add --no-cache \
-        dbus=1.14.4-r0 \
-        nss=3.85-r0 \
-        avahi-compat-libdns_sd=0.8-r6 \
-        avahi=0.8-r6 \
-        pulseaudio=16.1-r6 \
-        alsa-plugins-pulse=1.2.7.1-r0 \
-        snapcast=0.26.0-r3 \
-        \ #shairport-sync=4.3.4-r0 \
+        dbus \
+        nss \
+        avahi-compat-libdns_sd \
+        avahi \
+        pulseaudio \
+        alsa-plugins-pulse \
+        snapcast \
+        shairport-sync \
     \
     && cargo install \
         --locked \
@@ -28,7 +28,7 @@ RUN \
         --features with-dns-sd \
         --root /usr \
         --bin librespot \
-        --version 0.4.2 \
+        --version 0.6.0 \
         --verbose \
         -- librespot \
     \
@@ -58,11 +58,11 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="jsadusk" \
+    maintainer="r0bb10" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
     org.opencontainers.image.vendor="Jsadusk's addons" \
-    org.opencontainers.image.authors="jsadusk" \
+    org.opencontainers.image.authors="r0bb10" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
