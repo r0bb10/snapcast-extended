@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Jsadusk's' add-on repository
-url: "https://github.com/jsadusk/hassio-addons"
-maintainer: Joe Sadusk
+name: r0bb10s Snapcast Repository
+url: "https://github.com/r0bb10/snapcast-extended"
+maintainer: r0bb10
